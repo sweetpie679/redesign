@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tilapia Hotel - Mwanza</title>
+
+  <style>
+
+    * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   }
+
+  .checking,
+  .about,
+  .services,
+  .gallery,
+  .footer {
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 0 30px;
+    font-family: Gothic,Apple Gothic, Google, sans-serif, serif;
+  }
+
+  .checking,
+  .about,
+  .services h1{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 2;
+          font-family: sans-serif, Apple Gothic;
+    }
+
+    .checking,
+    .about,
+    .services,
+    .footer p{
+      display: flex;
+      flex-direction:row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      line-height: 2;
+      font-size: 1em;
+      height: 90px;
+    }
+
+
+  .header {
+      padding: 15px 70px;
+      display: flex;
+      align-content: center;
+      /*align-items: baseline;*/
+      justify-content: space-between; /*space betweet elements within the header, there are 2 of them*/
+      background-color: #def3f6;
+      line-height: 1.9;
+      position: fixed; /* putting this property makes content slide over nav */
+      width: 100%;
+      top: 0;
+      height: 90px;
+    }
+
+    .nav {
+        display: flex;
+        align-content: center;
+        gap: 60px;
+        list-style-type: none;
+        vertical-align: bottom;
+        overflow: hidden;
+      }
+
+    .nav li a {
+        text-decoration: none;
+        color: black;
+        font-family: Apple Gothic;
+        font-size: 1.2rem;
+      }
+
+    .nav li a:hover{
+      background:#3b5998;
+      color: black;
+    }
+
+    .checking {
+      display: flex;
+      flex-direction:row;
+      flex-wrap: wrap;
+      background-color: seashell;
+      cursor: pointer;
+      height: 750px;
+    }
+
+    .checkout{ 
+      font-size: 16px;
+      font-weight: 700; 
+    }
+
+    .about {
+      display: flex;
+      flex-direction:row;
+      align-content: center;
+      flex-wrap: wrap;
+      align-content: flex-end;
+      background-color: #def3f6;
+      height: auto;
+    }
+
+    .services {
+      display: flex;
+      align-content:center;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: #def3f6;
+      height: 60px;
+    }  
+    .services img{
+      max-width: 30px;
+      max-height: 30px;
+    }
+
+    .gallery{
+      background-color: white;
+      margin-top: 110px;
+      height: auto;
+    }
+
+    .gallery:hover {
+      /*border: 1px solid #777;*/
+      color: darkseagreen;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction:column;
+      background-color:#blue;
+      height: 90px;
+      color: #044F67;
+
+    }
+
+
+    img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+          body {
+            /*width: 500px;*/
+            /*margin: 0 auto;*/
+            /*padding: 50px;*/
+          }
+
+          div.elem-group {
+            margin: 20px 0;
+          }
+
+          div.elem-group.inlined {
+            width: 49%;
+            display: inline-block;
+            float: left;
+            margin-left: 1%;
+          }
+
+          label {
+            display: block;
+            font-family: sans-serif /*;'Nanum Gothic';*/
+            padding-bottom: 10px;
+            font-size: 1.25em;
+          }
+
+          input, select, textarea {
+            border-radius: 2px;
+            border: 2px solid #777;
+            box-sizing: border-box;
+            font-size: 1.25em;
+            font-family: sans-serif;/*'Nanum Gothic';*/
+            width: 100%;
+            padding: 10px;
+          }
+
+          div.elem-group.inlined input {
+            width: 95%;
+            display: inline-block;
+          }
+
+          textarea {
+            height: 100px;
+          }
+
+
+          button {
+            height: 50px;
+            width: 210px;
+            background: #064273;
+            border: none;
+            color: white;
+            font-size: 1.25em;
+            font-family: sans-serif /*;'Nanum Gothic','Apple Gothic', 'sans-serif;';*/
+            border-radius: 4px;
+            cursor: pointer;
+          }
+
+          button:hover {
+            background: #3b5998;
+          }
+
+  </style>
+</head>
+
+
+<body>
+
+  <div class="header">
+      <img src="newtilapia.png" class="logo">
+      <!-- <h2 class="logo">freeCodeCamp</h2> -->
+
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Accomodation</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Rates</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Gallery</a></li>
+      </ul>
+
+</div>
+
+
+      <div class="gallery">
+          <img src="tilapia-main.jpg" alt="tilapia main">
+          <!-- <p>Add a description of the image here</p> -->
+      </div>
+
+
+       <div class="checking">
+           
+              <form action="#" method="#">
+                    <label for="name"><h1>Room Reservations</h1></label>
+
+                        <div class="elem-group inlined">
+                              <label for="adult">Adults</label>
+                              <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+                        </div>
+                        <div class="elem-group inlined">
+                              <label for="child">Children</label>
+                              <input type="number" id="child" name="total_children" placeholder="1" min="0" required>
+                        </div>
+
+                        <div class="elem-group inlined">
+                              <label for="checkin-date">Check-in Date</label>
+                              <input type="date" id="checkin-date" name="checkin" required>
+                        </div>
+                        <div class="elem-group inlined">
+                              <label for="checkout-date">Check-out Date</label>
+                              <input type="date" id="checkout-date" name="checkout" required>
+                        </div>
+
+                        <div class="elem-group">
+                          <label for="room-selection">Room Preference</label>
+                          <select id="room-selection" name="room_preference" required>
+                              <option value="">Choice ...</option>
+                              <option value="#">Suite</option>
+                              <option value="#">Presidential</option>
+                              <option value="#">Delux</option>
+                          </select>
+                        </div>
+                        <!-- <hr> -->
+                        <div class="elem-group">
+                          <label for="message">Comments?</label>
+                          <textarea id="message" name="visitor_message" placeholder="Anything else you would like to tell us.." required></textarea>
+                        </div>
+                        <button type="submit">Check Availability</button>
+
+                  </form>
+
+      </div>
+
+      <div class="about">
+            <!-- <div class="about-us">
+            <h1>About Us</h1>
+            <p>Hotel Tilapia is a hotel with great ambiance. Situated along Capri Point on the
+            serene shores of Lake Victoria and only minutes away from town. It is a place where you can relax at our Nirvana Spa, sunbathe at
+            the swimming pool, enjoy a delicious meal at one of the restaurants or cocktails at the famous SP Bar. If you are planning a business trip,
+            Hotel Tilapia provides a business center, conference facilities and a FREE wireless network throughout the hotel.And with its perfect location and most amazing view, 
+            Hotel Tilapia is the ideal place for your stay in Mwanza</p></div> -->
+
+            <!-- <div class="images"> -->
+                  <!-- <p> Product description</p>  -->
+                  <!-- <img src="tilapia-sea.jpg"> -->
+                  <!-- <img src="tilapia-six.jpg"> -->
+           <!-- </div> -->
+
+           <!-- <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.935218319348!2d32.893089115509554!3d-2.5280502389560517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19ce64ac532e2523%3A0xb2271a44b2555a8b!2sHotel%20Tilapia%20Ltd!5e0!3m2!1sen!2sus!4v1667276138728!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div> -->
+      </div>
+
+
+    <div class="services">
+       <!--    <h1>Media</h1> -->
+          <div><img src="facebook.jpg"></div>
+          <div><img src="insta.jpg"></div>
+         <!--  <img src="trip.jpg">
+          <img src="tip-advisor.jpg"> -->
+    </div>
+
+
+  <div class="footer">
+        <!-- <p>&copy; uiux-fall-2022: usability and web redesign</p> -->
+        <h3>Contact</h3>
+        <!-- <p>Hotel Tilapia Ltd</p><p>P.O.BOX 82</p><p>Nyamagana, Capripoint</p><p> Mwanza, Tanzania</p> -->
+        <p>Email: tilapia@mwanza-online.com or hoteltilapia18@gmail.com</p>
+        <p>Mobile: +255 28 2500617 or +255  784 700500</p>
+  </div>
+<hr>
+</body>
+</html>
